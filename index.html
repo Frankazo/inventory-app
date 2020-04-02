@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>InvApp</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,99 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand navbar-light bg-light">
+    <h2><a class="navbar-brand" href="#">InvApp</a></h2>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://www.linkedin.com/in/franklr/" target="_blank">Frank Luis-Ravelo<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Never use Real Credentials</a>
+       </li>
+        <!-- Sign In -->
+        <li class="nav-item dropdown my-2 my-lg-0 collapse.show">
+          <a class="nav-link btn btn-outline-success my-2 my-sm-0" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sign in
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <form id="sign-in">
+              <legend>Sign In</legend>
+              <input type="email" name="credentials[email]" placeholder="user@email.com" >
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="submit" value="Sign In">
+            </form>
+          </div>
+        </li>
+
+        <!-- Sign up -->
+        <li class="nav-item dropdown my-2 my-lg-0">
+          <a class="nav-link btn btn-outline-success my-2 my-sm-0" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sign up
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <form id="sign-up">
+            <fieldset>
+              <legend>Sign Up</legend>
+            <input type="email" name="credentials[email]" placeholder="user@email.com" >
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <input type="password" name="credentials[password_confirmation]" placeholder="Password confirmation ">
+            <input type="submit" value="Sign Up">
+            </fieldset>
+          </form>
+          </div>
+        </li>
+
+        <!-- Change Password -->
+        <li class="nav-item dropdown my-2 my-lg-0">
+          <a class="nav-link btn btn-outline-success my-2 my-sm-0 hide" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Change Password
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <form id="change-Pw">
+                <legend>Change Password</legend>
+              <input type="password" name="passwords[old]" placeholder="Actual Password">
+              <input type="password" name="passwords[new]" placeholder="New Password">
+              <input type="submit" value="Change Password">
+            </form>
+          </div>
+        </li>
+
+        <!-- New Inventory Button -->
+        <li class="nav-item">
+          <form id="new-Inv" class="hide">
+            <fieldset>
+              <input type="submit" value="New Inv" class="btn btn-outline-success my-2 my-sm-0">
+            </fieldset>
+          </form>
+        </li>
+
+        <!-- Stats Button -->
+        <li class="nav-item">
+          <form id="stats" class="hide">
+            <fieldset>
+              <input type="submit" value="All Inv" class="btn btn-outline-success my-2 my-sm-0">
+            </fieldset>
+          </form>
+        </li>
+      </ul>
+
+      <!-- Auth Messages -->
+    <h3 id='Messages' class='messageBoard'></h3>
+
+      <!-- Log out -->
+      <form id="sign-out" class="hide form-inline my-2 my-lg-0">
+          <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Log Out">
+      </form>
+    </div>
+  </nav>
+  <!-- footer  -->
+<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+  <div class="text-center">
+    <a class="nav-link" href="https://www.linkedin.com/in/franklr/" target="_blank">© Copyright 2020<span class="sr-only">(current)</span></a>
+  </div>
+</footer>
     </body>
 </html>

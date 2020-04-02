@@ -1,1 +1,47 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+
+$alt-color: #0f9d58;
+$body-bg-color: $gray-200;
+$font-color: $light;
+$error: #f00;
+$success: #0F9D58;
+
+html,
+body {
+  background-color: $body-bg-color;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  flex-shrink: none;
+}
+
+dropdown-menu {
+  padding: 20px 15px;
+}
+
+.btn {
+  margin: 0 3px;
+}
+
+input {
+  margin: 5px 0;
+}
+
+.hide {
+  display: none;
+}
+
+.failure {
+  color: $error;
+}
+
+.success {
+  color: $success;
+}
