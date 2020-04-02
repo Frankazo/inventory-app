@@ -1,51 +1,65 @@
-# Application Title: A Description
+Inventory App
+-------------
+CONTENTS OF THIS FILE
+---------------------
 
-This application allows the user to do x, y, and z. Maybe here's a reason why I
-wanted to do this project, or came up with this idea.
+ * Introduction
+ * Wireframes
+ * User Stories
+ * Planning and Development
+ * Future features
+ * Technologies
+ * Creator
 
-## Important Links
+ INTRODUCTION
+ ------------
 
-- [Other Repo](www.link.com)
-- [Deployed API](www.link.com)
-- [Deployed Client](www.link.com)
+  This is the First project for Software engineering Immersive SEI09.
+  Tic-tac-toe is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
 
-## Planning Story
+  The project is base on building a Webapp that runs the game, create the game from scratch, follow all the requirement and deploy a working version on Github.
 
-Lorem ipsum dolor amet cloud bread letterpress squid actually, single-origin
-coffee williamsburg af poutine fingerstache austin semiotics paleo man braid
-vexillologist. Tumeric literally banjo pickled disrupt cold-pressed thundercats
-shoreditch try-hard health goth intelligentsia pop-up small batch skateboard
-farm-to-table. Meh tofu fam, direct trade tattooed stumptown etsy everyday
-carry activated charcoal. Neutra cornhole polaroid literally salvia, listicle
-tofu.
+  ERD
+  ---
 
-### User Stories
+![EDR](https://i.imgur.com/yJAucB9.png)
 
-- As a user I want to sign in/up
-- As a user I want to Create a new < resource >
-- As a user I want to Read multiple < resources >
-- As a user I want to Read a single < resource >
-- As a user I want to Update a < resource > I own
-- As a user I want to Delete a < resource > I own
+  WIREFRAMES
+  ----------
+  Initial Stage
+  - ![alt text](https://i.imgur.com/pIvQyGz.jpg)
 
-### Technologies Used
+  - Sign In or Sign Up Stage
+  - ![alt text](https://i.imgur.com/x4UaPay.jpg)
 
-- jQuery
-- HTML/CSS
-- Bootstrap
-- Javascript
+  - Placeholder
+  - ![alt text](https://i.imgur.com/xgRVduj.jpg)
 
-### Unsolved Problems
 
-- Still need to ....
-- Would like to eventually ....
+  USER STORIES
+  ------------
 
-## Images
+    - As a user I want to sign in/up, change pass and log out.
+    - As a user I want to Create a new Inventory.
+    - As a user I want to Read multiple Items within an Inventory
+    - As a user I want to Read a single item
+    - As a user I want to Update an Inventory or item I own
+    - As a user I want to Delete an Inventory or item I own
 
-#### Wireframe:
-![wireframe](https://lucidchart.zendesk.com/hc/article_attachments/360001080866/Facebook_Wireframe_-_New_Page.png)
+  PLANING AND DEVELOPMENT
+  -----------------------
 
----
 
-#### ERD:
-![ERD](https://www.smartdraw.com/entity-relationship-diagram/img/cardinality.jpg?bn=1510011144)
+  FUTURE FEATURES
+  ---------------
+
+  TECHNOLOGIES
+  ------------
+    - html
+    - Scss
+    - javascript
+    - bootstrap
+
+  CREATOR
+  -------
+  - [Frank Luis-Ravelo](https://www.linkedin.com/in/franklr/)
