@@ -2,12 +2,11 @@
 const store = require('../store')
 const showInventoryTemplate = require('../templates/inventory-listing.handlebars')
 
-const createInvSuccess = function (apiAnswer) {
-  console.log('in ui')
-  console.log(apiAnswer.inventory)
+const onShowSucces = function (apiAnswer) {
   $('.inv-area, #index-btn').removeClass('hide')
   $('.cards').addClass('hide')
   store.inventory = apiAnswer.inventory
+  console.log(store.inventory)
 }
 
 const failure = function () {
@@ -15,7 +14,6 @@ const failure = function () {
 }
 
 const onIndexSucces = (data) => {
-  console.log(data)
   const showInventoriesHtml = showInventoryTemplate({ inventories: data.inventories })
   $('.deck').html(showInventoriesHtml)
   $('.cards').removeClass('hide')
@@ -23,7 +21,7 @@ const onIndexSucces = (data) => {
 }
 
 module.exports = {
-  createInvSuccess,
+  onShowSucces,
   onIndexSucces,
   failure
 }

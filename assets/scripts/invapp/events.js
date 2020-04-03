@@ -11,7 +11,9 @@ const onNewInv = function (event) {
   // console.log(data)
   // console.log('in Events')
   api.createInv(data)
-    .then(ui.createInvSuccess)
+    .then(function () {
+      onIndex(event)
+    })
     .catch(ui.Failure)
 }
 
@@ -30,9 +32,17 @@ const onDeleteInv = function (event) {
     .catch(ui.Failure)
 }
 
+const onShowInv = function (event) {
+  event.preventDefault()
+  api.showInv($(event.target).data('id'))
+    .then(ui.onShowSucces)
+    .catch(ui.Failure)
+}
+
 // export all functions
 module.exports = {
   onNewInv,
   onIndex,
-  onDeleteInv
+  onDeleteInv,
+  onShowInv
 }

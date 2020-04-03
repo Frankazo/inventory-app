@@ -11,6 +11,7 @@ $(() => {
   // inv event handlers, for create, update, show and delete
   $('.deck').on('submit', '#create-btn', invEvents.onNewInv)
   $('.deck').on('click', '.delete-inv-btn', invEvents.onDeleteInv)
+  $('.deck').on('click', '.show-inv-btn', invEvents.onShowInv)
   $('#index-btn').on('submit', invEvents.onIndex)
   // $('.content').on('click', '.btn-delete', onDeleteBooks)
   // auth event handlers, for Sign Up, Sign In, Change Password and Sign Out

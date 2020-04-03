@@ -24,6 +24,16 @@ const indexInv = function () {
   })
 }
 
+const showInv = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/inventories/' + id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 const deleteInv = function (id) {
   return $.ajax({
     url: config.apiUrl + '/inventories/' + id,
@@ -37,5 +47,6 @@ const deleteInv = function (id) {
 module.exports = {
   createInv,
   indexInv,
-  deleteInv
+  deleteInv,
+  showInv
 }
