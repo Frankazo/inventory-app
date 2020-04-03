@@ -1,10 +1,6 @@
   <div class="card text-center h-100">
     <div class="card-header">
-      {{#if inventory.reference}}
-        {{inventory.reference}}
-      {{else}}
-        No Reference provided.
-      {{/if}}
+      Inventory {{inventory.id}}
     </div>
     <div class="card-body">
       <h5 class="card-title">
@@ -15,9 +11,9 @@
           {{/if}}
       </h5>
       <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-      <button data-id="{{inventory.id}}" type="button" name="show" class="btn btn-primary show-inv-btn">Check</button>
-      <button data-id="{{inventory.id}}" type="button" name="Edit" class="btn btn-warning edit-inv-btn">Edit</button>
-      <button data-id="{{inventory.id}}" type="button" name="Remove" class="btn btn-danger delete-inv-btn">Delete</button>
+      <button data-id="{{inventory.id}}" type="button" name="show" class="btn btn-info show-inv-btn">Check</button>
+      <button data-id="{{inventory.id}}" type="button" name="Edit" class="btn btn-outline-info edit-inv-btn">Edit</button>
+      <button data-id="{{inventory.id}}" type="button" name="Remove" class="btn btn-info delete-inv-btn">Delete</button>
       </div>
     </div>
     <div class="card-footer text-muted">
