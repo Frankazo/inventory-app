@@ -14,6 +14,19 @@ const createInv = function (data) {
     data
   })
 }
+
+const indexInv = function () {
+  console.log('in api')
+  return $.ajax({
+    url: config.apiUrl + '/inventories',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
-  createInv
+  createInv,
+  indexInv
 }

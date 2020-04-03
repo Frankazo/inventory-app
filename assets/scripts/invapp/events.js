@@ -14,7 +14,15 @@ const onNewInv = function (event) {
     .then(ui.createInvSuccess)
     .catch(ui.Failure)
 }
+
+const onIndex = function () {
+  api.indexInv()
+    .then(ui.onIndexSucces)
+    .catch(ui.Failure)
+}
+
 // export all functions
 module.exports = {
-  onNewInv
+  onNewInv,
+  onIndex
 }

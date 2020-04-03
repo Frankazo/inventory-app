@@ -1,5 +1,7 @@
 'use strict'
 const store = require('../store')
+const invEvents = require('../invapp/events')
+
 const signUpSuccess = function (data) {
   $('#Messages').text('Signed up Succesfully, you have to Log in').removeClass('failure').addClass('success')
   $('.dropdown-menu').removeClass('show')
@@ -12,12 +14,13 @@ const signUpFailure = function () {
 
 const signInSuccess = function (data) {
   $('#Messages').text('Signed in Succesfully').removeClass('failure').addClass('success')
-  $('#navbarDropdown3, #sign-out, .cards').removeClass('hide')
+  $('#navbarDropdown3, #sign-out, .cards, #index-btn').removeClass('hide')
   $('#navbarDropdown1, #navbarDropdown2').addClass('hide')
   $('.dropdown-menu').removeClass('show')
 
   document.getElementById('sign-in').reset()
   store.user = data.user
+  invEvents.onIndex()
 }
 const signInFailure = function () {
   $('#Messages').text('Error Signing in').removeClass('success').addClass('failure')
@@ -35,7 +38,7 @@ const changePWFailure = function () {
 
 const signOutSuccess = function () {
   $('#Messages').text('Signed out Succesfully').removeClass('failure').addClass('success')
-  $('#sign-out, #navbarDropdown3, .cards').addClass('hide')
+  $('#sign-out, #navbarDropdown3, .cards, .inv-area, #index-btn').addClass('hide')
   $('#navbarDropdown1, #navbarDropdown2').removeClass('hide')
 }
 const signOutFailure = function () {

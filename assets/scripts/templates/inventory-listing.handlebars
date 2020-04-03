@@ -1,0 +1,33 @@
+{{#each inventories as |inventory|}}
+  {{!--{{log book}}--}}
+  <div data-id="{{inventory.id}}" class="col mb-4">
+    <div class="card text-center h-100">
+      <div class="card-header">
+        {{#if inventory.reference}}
+          {{inventory.reference}}
+        {{else}}
+          No Reference provided.
+        {{/if}}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">
+           {{#if inventory.reference}}
+              {{inventory.reference}}
+            {{else}}
+              No Reference provided.
+            {{/if}}
+        </h5>
+        <!-- <p class="card-text">Placeholder for future cards</p> -->
+        <!-- <a href="#" class="btn btn-primary">Inventory</a> -->
+        <button data-id="{{inventory.id}}" type="button" name="Remove" class="btn btn-primary">Inventory</button>
+      </div>
+      <div class="card-footer text-muted">
+        {{#if inventory.date}}
+          {{inventory.date}}
+        {{else}}
+          No Date provided.
+        {{/if}}
+      </div>
+    </div>
+  </div>
+{{/each}}
