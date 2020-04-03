@@ -1,3 +1,16 @@
+<div class="col mb-4">
+  <div class="card text-center h-100">
+    <div class="card-body">
+      <h5 class="card-title">Blank Inventory</h5>
+      <p class="card-text">PlaceHolder</p>
+      <form id="create-btn" class="col lg-2">
+        <input type="text" name="inventory[reference]" placeholder="Reference">
+        <input type="Date" name="inventory[date]">
+        <input class="btn btn-primary create-btn" type="submit" value="Create New">
+      </form>
+    </div>
+  </div>
+</div>
 {{#each inventories as |inventory|}}
   {{!--{{log book}}--}}
   <div data-id="{{inventory.id}}" class="col mb-4">

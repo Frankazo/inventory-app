@@ -14,7 +14,7 @@ const signUpFailure = function () {
 
 const signInSuccess = function (data) {
   $('#Messages').text('Signed in Succesfully').removeClass('failure').addClass('success')
-  $('#navbarDropdown3, #sign-out, .cards, #index-btn').removeClass('hide')
+  $('#navbarDropdown3, #sign-out, .cards').removeClass('hide')
   $('#navbarDropdown1, #navbarDropdown2').addClass('hide')
   $('.dropdown-menu').removeClass('show')
 
