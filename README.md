@@ -14,10 +14,8 @@ CONTENTS OF THIS FILE
  INTRODUCTION
  ------------
 
-  This is the First project for Software engineering Immersive SEI09.
-  Tic-tac-toe is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
+  This is the Second project for Software engineering Immersive SEI09.
 
-  The project is base on building a Webapp that runs the game, create the game from scratch, follow all the requirement and deploy a working version on Github.
 
   ERD
   ---
