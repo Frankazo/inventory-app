@@ -5,6 +5,7 @@ const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('../../../lib/get-form-fields')
 
+// New inventory Event
 const onNewInv = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -15,13 +16,14 @@ const onNewInv = function (event) {
     .catch(ui.Failure)
 }
 
+// Index All Event
 const onIndex = function () {
-  // event.preventDefault()
   api.indexInv()
     .then(ui.onIndexSucces)
     .catch(ui.Failure)
 }
 
+// Index all on button Event
 const onIndexbtn = function () {
   event.preventDefault()
   api.indexInv()
@@ -29,6 +31,7 @@ const onIndexbtn = function () {
     .catch(ui.Failure)
 }
 
+// Delete inventory Event
 const onDeleteInv = function (event) {
   event.preventDefault()
   api.deleteInv($(event.target).data('id'))
@@ -38,6 +41,7 @@ const onDeleteInv = function (event) {
     .catch(ui.Failure)
 }
 
+// Show inventory Event
 const onShowInv = function (event) {
   event.preventDefault()
   api.showInv($(event.target).data('id'))
@@ -45,11 +49,13 @@ const onShowInv = function (event) {
     .catch(ui.Failure)
 }
 
+// Edit button Event - Card State
 const onEditInv = function (event) {
   event.preventDefault()
   ui.onEditstate($(event.target).data('id'))
 }
 
+// Update inventory Event - Card State
 const onUpdateInv = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)

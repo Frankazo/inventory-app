@@ -3,6 +3,7 @@
 const config = require('../config')
 const store = require('../store')
 
+// Create inventory call
 const createInv = function (data) {
   return $.ajax({
     url: config.apiUrl + '/inventories',
@@ -14,6 +15,7 @@ const createInv = function (data) {
   })
 }
 
+// Update inventory call
 const updateInv = function (data, id) {
   return $.ajax({
     url: config.apiUrl + '/inventories/' + id,
@@ -25,6 +27,7 @@ const updateInv = function (data, id) {
   })
 }
 
+// Index All inventories call
 const indexInv = function () {
   return $.ajax({
     url: config.apiUrl + '/inventories',
@@ -35,6 +38,7 @@ const indexInv = function () {
   })
 }
 
+// Show one inventory call
 const showInv = function (id) {
   return $.ajax({
     url: config.apiUrl + '/inventories/' + id,
@@ -45,6 +49,7 @@ const showInv = function (id) {
   })
 }
 
+// delete one inventory call
 const deleteInv = function (id) {
   return $.ajax({
     url: config.apiUrl + '/inventories/' + id,

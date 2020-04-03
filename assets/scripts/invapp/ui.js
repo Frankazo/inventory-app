@@ -8,7 +8,6 @@ const onShowSucces = function (apiAnswer) {
   $('.inv-area, #index-btn').removeClass('hide')
   $('.cards').addClass('hide')
   store.inventory = apiAnswer.inventory
-  console.log(store.inventory)
 }
 
 const failure = function () {
