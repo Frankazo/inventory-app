@@ -5,7 +5,7 @@
       <p class="card-text">PlaceHolder</p>
       <form id="create-btn" class="col lg-2">
         <input type="text" name="inventory[reference]" placeholder="Reference">
-        <input type="Date" name="inventory[date]">
+        <input type="date" name="inventory[date]">
         <input class="btn btn-primary create-btn" type="submit" value="Create New">
       </form>
     </div>
@@ -21,6 +21,7 @@
         {{else}}
           No Reference provided.
         {{/if}}
+                <button data-id="{{inventory.id}}" type="button" name="Edit" class="btn btn-warning edit-inv-btn">Edit</button>
       </div>
       <div class="card-body">
         <h5 class="card-title">

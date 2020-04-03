@@ -8,8 +8,6 @@ const getFormFields = require('../../../lib/get-form-fields')
 const onNewInv = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  // console.log(data)
-  // console.log('in Events')
   api.createInv(data)
     .then(function () {
       onIndex(event)
@@ -18,6 +16,14 @@ const onNewInv = function (event) {
 }
 
 const onIndex = function () {
+  // event.preventDefault()
+  api.indexInv()
+    .then(ui.onIndexSucces)
+    .catch(ui.Failure)
+}
+
+const onIndexbtn = function () {
+  event.preventDefault()
   api.indexInv()
     .then(ui.onIndexSucces)
     .catch(ui.Failure)
@@ -39,10 +45,26 @@ const onShowInv = function (event) {
     .catch(ui.Failure)
 }
 
+const onEditInv = function (event) {
+  event.preventDefault()
+  ui.onEditstate($(event.target).data('id'))
+}
+
+const onUpdateInv = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.updateInv(data, event.target.id)
+    .then(ui.onUpdateSucces)
+    .catch(ui.Failure)
+}
+
 // export all functions
 module.exports = {
   onNewInv,
   onIndex,
   onDeleteInv,
-  onShowInv
+  onShowInv,
+  onEditInv,
+  onUpdateInv,
+  onIndexbtn
 }

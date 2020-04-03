@@ -14,6 +14,17 @@ const createInv = function (data) {
   })
 }
 
+const updateInv = function (data, id) {
+  return $.ajax({
+    url: config.apiUrl + '/inventories/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 const indexInv = function () {
   return $.ajax({
     url: config.apiUrl + '/inventories',
@@ -48,5 +59,6 @@ module.exports = {
   createInv,
   indexInv,
   deleteInv,
-  showInv
+  showInv,
+  updateInv
 }
