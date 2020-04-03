@@ -4,7 +4,6 @@ const config = require('../config')
 const store = require('../store')
 
 const createInv = function (data) {
-  console.log('in api')
   return $.ajax({
     url: config.apiUrl + '/inventories',
     method: 'POST',
@@ -16,7 +15,6 @@ const createInv = function (data) {
 }
 
 const indexInv = function () {
-  console.log('in api')
   return $.ajax({
     url: config.apiUrl + '/inventories',
     method: 'GET',
@@ -26,7 +24,18 @@ const indexInv = function () {
   })
 }
 
+const deleteInv = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/inventories/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createInv,
-  indexInv
+  indexInv,
+  deleteInv
 }

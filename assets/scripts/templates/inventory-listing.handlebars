@@ -32,7 +32,8 @@
         </h5>
         <!-- <p class="card-text">Placeholder for future cards</p> -->
         <!-- <a href="#" class="btn btn-primary">Inventory</a> -->
-        <button data-id="{{inventory.id}}" type="button" name="Remove" class="btn btn-primary">Inventory</button>
+        <button data-id="{{inventory.id}}" type="button" name="show" class="btn btn-primary show-inv-btn">Inventory</button>
+        <button data-id="{{inventory.id}}" type="button" name="Remove" class="btn btn-danger delete-inv-btn">Delete</button>
       </div>
       <div class="card-footer text-muted">
         {{#if inventory.date}}

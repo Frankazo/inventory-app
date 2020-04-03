@@ -10,6 +10,7 @@ const invEvents = require('./invapp/events')
 $(() => {
   // inv event handlers, for create, update, show and delete
   $('.deck').on('submit', '#create-btn', invEvents.onNewInv)
+  $('.deck').on('click', '.delete-inv-btn', invEvents.onDeleteInv)
   $('#index-btn').on('submit', invEvents.onIndex)
   // $('.content').on('click', '.btn-delete', onDeleteBooks)
   // auth event handlers, for Sign Up, Sign In, Change Password and Sign Out

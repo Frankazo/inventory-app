@@ -21,8 +21,18 @@ const onIndex = function () {
     .catch(ui.Failure)
 }
 
+const onDeleteInv = function (event) {
+  event.preventDefault()
+  api.deleteInv($(event.target).data('id'))
+    .then(function () {
+      onIndex(event)
+    })
+    .catch(ui.Failure)
+}
+
 // export all functions
 module.exports = {
   onNewInv,
-  onIndex
+  onIndex,
+  onDeleteInv
 }
