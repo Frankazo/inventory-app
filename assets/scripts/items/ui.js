@@ -1,11 +1,13 @@
 'use strict'
 const store = require('../store')
-const itemEvents = require('./events')
+
 const showItemsTemplate = require('../templates/item-listing.handlebars')
+const showItemTemplate = require('../templates/item.handlebars')
 
 const createItemSucces = function (apiAnswer) {
-  console.log('in items ui')
-  itemEvents.indexItems()
+  // Create and append a new item
+  const showItemHtml = showItemTemplate({ item: apiAnswer.item })
+  $('.items').append(showItemHtml)
 }
 
 const onIndexSucces = function (apiAnswer) {

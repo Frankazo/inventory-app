@@ -12,7 +12,7 @@ const onCreateItem = function (event) {
   // console.log('in item events')
   api.createItem(data)
     .then(ui.createItemSucces)
-    .catch(ui.Failure)
+    .catch(ui.failure)
 }
 
 // Index all items Event
@@ -20,7 +20,7 @@ const indexItems = function () {
   // event.preventDefault()
   api.indexItems()
     .then(ui.onIndexSucces)
-    .catch(ui.Failure)
+    .catch(ui.failure)
 }
 
 // export all functions
