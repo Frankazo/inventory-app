@@ -60,6 +60,7 @@ const deleteInv = function (id) {
   })
 }
 
+// export all functions
 module.exports = {
   createInv,
   indexInv,
