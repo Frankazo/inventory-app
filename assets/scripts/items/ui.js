@@ -1,15 +1,29 @@
 'use strict'
-// const store = require('../store')
+const store = require('../store')
+const itemEvents = require('./events')
+const showItemsTemplate = require('../templates/item-listing.handlebars')
 
 const createItemSucces = function (apiAnswer) {
-  console.log(apiAnswer)
+  console.log('in items ui')
+  itemEvents.indexItems()
 }
+
+const onIndexSucces = function (apiAnswer) {
+  // Map a new array to only display specific inventory items
+  const newArray = apiAnswer.items.map(x => x.inventory_id === store.inventory.id ? x : false)
+  // create the items template and added to the html
+  const showItemsHtml = showItemsTemplate({ items: newArray })
+  $('.items').html(showItemsHtml)
+}
+
 const failure = function () {
+  // error message to handle all errors
   $('#Messages').text('Error').removeClass('success').addClass('failure')
 }
 
 // export all functions
 module.exports = {
   failure,
-  createItemSucces
+  createItemSucces,
+  onIndexSucces
 }

@@ -109,6 +109,13 @@
       </div>
     </section>
     <section class="inv-area hide">
+      <form class="item-form">
+            <input type="text" name="items[name]" placeholder="Item">
+
+            <input type="text" name="items[quantity]" placeholder="Quantity">
+
+            <input class="btn btn-outline-info my-2 my-sm-0" type="submit" value="Add">
+        </form>
       <table class="table item-table">
           <thead>
             <tr>
@@ -119,32 +126,6 @@
             </tr>
           </thead>
           <tbody class="items">
-            <tr>
-              <th scope="row">1</th>
-              <form class="item-form">
-                <td>
-                    <input type="text" name="items[name]" placeholder="Item">
-                </td>
-                <td>
-                    <input type="text" name="items[quantity]" placeholder="Quantity">
-                </td>
-                <td>
-                    <input class="btn btn-outline-info my-2 my-sm-0" type="submit" value="Add">
-                </td>
-              </form>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Potato</td>
-              <td>3 Lbs</td>
-              <td>Id</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Potato</td>
-              <td>3 Lbs</td>
-              <td>Id</td>
-            </tr>
           </tbody>
       </table>
     </section>

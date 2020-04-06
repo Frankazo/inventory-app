@@ -1,5 +1,6 @@
 'use strict'
 const store = require('../store')
+const eventsItem = require('../items/events')
 const showInventoryTemplate = require('../templates/inventory-listing.handlebars')
 const showEditTemplate = require('../templates/edit-state.handlebars')
 const showUpdatedTemplate = require('../templates/updated-listing.handlebars')
@@ -8,6 +9,7 @@ const onShowSucces = function (apiAnswer) {
   $('.inv-area, #index-btn').removeClass('hide')
   $('.cards').addClass('hide')
   store.inventory = apiAnswer.inventory
+  eventsItem.indexItems()
 }
 
 const failure = function () {

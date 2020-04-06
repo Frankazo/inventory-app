@@ -16,6 +16,8 @@ $(() => {
   $('.deck').on('click', '.edit-inv-btn', invEvents.onEditInv)
   $('.deck').on('submit', '.update-inv-btn', invEvents.onUpdateInv)
   $('#index-btn').on('submit', invEvents.onIndexbtn)
+
+  // items event handlers, for create, update, show and delete
   $('.item-form').on('submit', itemEvents.onCreateItem)
 
   // auth event handlers, for Sign Up, Sign In, Change Password and Sign Out
