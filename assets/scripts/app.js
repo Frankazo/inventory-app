@@ -19,6 +19,7 @@ $(() => {
 
   // items event handlers, for create, update, show and delete
   $('.item-form').on('submit', itemEvents.onCreateItem)
+  $('.items').on('click', '.delete-item-btn', itemEvents.onDeleteItem)
 
   // auth event handlers, for Sign Up, Sign In, Change Password and Sign Out
   $('#sign-up').on('submit', authEvents.onSignUp)

@@ -5,7 +5,6 @@ const store = require('../store')
 
 // Create item call
 const createItem = function (data) {
-  console.log('in items api')
   return $.ajax({
     url: config.apiUrl + '/items',
     method: 'POST',
@@ -23,7 +22,7 @@ const createItem = function (data) {
 }
 
 // Index All items call
-const indexItems = function () {
+const indexAllItems = function () {
   return $.ajax({
     url: config.apiUrl + '/items',
     method: 'GET',
@@ -33,8 +32,20 @@ const indexItems = function () {
   })
 }
 
+// Delete an item call
+const deleteItem = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/items/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 // export all functions
 module.exports = {
   createItem,
-  indexItems
+  indexAllItems,
+  deleteItem
 }

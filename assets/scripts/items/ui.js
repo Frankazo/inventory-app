@@ -2,13 +2,6 @@
 const store = require('../store')
 
 const showItemsTemplate = require('../templates/item-listing.handlebars')
-const showItemTemplate = require('../templates/item.handlebars')
-
-const createItemSucces = function (apiAnswer) {
-  // Create and append a new item
-  const showItemHtml = showItemTemplate({ item: apiAnswer.item })
-  $('.items').append(showItemHtml)
-}
 
 const onIndexSucces = function (apiAnswer) {
   // Map a new array to only display specific inventory items
@@ -26,6 +19,5 @@ const failure = function () {
 // export all functions
 module.exports = {
   failure,
-  createItemSucces,
   onIndexSucces
 }

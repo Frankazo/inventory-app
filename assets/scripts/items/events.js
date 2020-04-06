@@ -11,20 +11,32 @@ const onCreateItem = function (event) {
   const data = getFormFields(event.target)
   // console.log('in item events')
   api.createItem(data)
-    .then(ui.createItemSucces)
+    .then(function () {
+      indexItems()
+    })
     .catch(ui.failure)
 }
 
 // Index all items Event
 const indexItems = function () {
-  // event.preventDefault()
-  api.indexItems()
+  api.indexAllItems()
     .then(ui.onIndexSucces)
+    .catch(ui.failure)
+}
+
+// New inventory Event
+const onDeleteItem = function (event) {
+  event.preventDefault()
+  api.deleteItem($(event.target).data('id'))
+    .then(function () {
+      indexItems()
+    })
     .catch(ui.failure)
 }
 
 // export all functions
 module.exports = {
   onCreateItem,
-  indexItems
+  indexItems,
+  onDeleteItem
 }

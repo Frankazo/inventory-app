@@ -21,6 +21,7 @@ const onIndexSucces = (data) => {
   $('.deck').html(showInventoriesHtml)
   $('.cards').removeClass('hide')
   $('#index-btn, .inv-area').addClass('hide')
+  $('.items').html('')
 }
 const onEditstate = (id) => {
   const showEditHtml = showEditTemplate({ id: id })
