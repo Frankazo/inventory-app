@@ -64,13 +64,17 @@ const onUpdateInv = function (event) {
     .catch(ui.Failure)
 }
 
+const addHandlers = () => {
+  $('.deck').on('submit', '#create-btn', onNewInv)
+  $('.deck').on('click', '.delete-inv-btn', onDeleteInv)
+  $('.deck').on('click', '.show-inv-btn', onShowInv)
+  $('.deck').on('click', '.edit-inv-btn', onEditInv)
+  $('.deck').on('submit', '.update-inv-btn', onUpdateInv)
+  $('#index-btn').on('submit', onIndexbtn)
+}
+
 // export all functions
 module.exports = {
-  onNewInv,
   onIndex,
-  onDeleteInv,
-  onShowInv,
-  onEditInv,
-  onUpdateInv,
-  onIndexbtn
+  addHandlers
 }

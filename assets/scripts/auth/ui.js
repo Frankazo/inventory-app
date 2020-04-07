@@ -14,8 +14,8 @@ const signUpFailure = function () {
 
 const signInSuccess = function (data) {
   $('#Messages').text('Signed in Succesfully').removeClass('failure').addClass('success')
-  $('#navbarDropdown3, #sign-out, .cards').removeClass('hide')
-  $('#navbarDropdown1, #navbarDropdown2').addClass('hide')
+  $('.logout-pass, .cards').removeClass('hide')
+  $('.siging').addClass('hide')
   $('.dropdown-menu').removeClass('show')
 
   document.getElementById('sign-in').reset()
@@ -38,8 +38,8 @@ const changePWFailure = function () {
 
 const signOutSuccess = function () {
   $('#Messages').text('Signed out Succesfully').removeClass('failure').addClass('success')
-  $('#sign-out, #navbarDropdown3, .cards, .inv-area, #index-btn').addClass('hide')
-  $('#navbarDropdown1, #navbarDropdown2').removeClass('hide')
+  $('.logout-pass, .cards, .inv-area, #index-btn').addClass('hide')
+  $('.siging').removeClass('hide')
 }
 const signOutFailure = function () {
   $('#Messages').text('Error Signing out').removeClass('success').addClass('failure')

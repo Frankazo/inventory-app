@@ -1,6 +1,6 @@
 'use strict'
 const store = require('../store')
-const eventsItem = require('../items/events')
+const eventsItem = require('../items/events.js')
 const showInventoryTemplate = require('../templates/inventory-listing.handlebars')
 const showEditTemplate = require('../templates/edit-state.handlebars')
 const showUpdatedTemplate = require('../templates/updated-listing.handlebars')

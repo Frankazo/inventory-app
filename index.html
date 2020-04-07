@@ -17,72 +17,14 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand navbar-light bg-light">
     <h2><a class="navbar-brand" href="#">InvApp</a></h2>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="https://www.linkedin.com/in/franklr/" target="_blank">Frank Luis-Ravelo<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Never use Real Credentials</a>
-        </li>
-        <!-- Sign In -->
-        <li class="nav-item dropdown my-2 my-lg-0 collapse.show">
-          <a class="nav-link btn btn-outline-info my-2 my-sm-0" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sign in
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <form id="sign-in">
-              <legend>Sign In</legend>
-              <input type="email" name="credentials[email]" placeholder="user@email.com">
-              <input type="password" name="credentials[password]" placeholder="Password">
-              <input type="submit" value="Sign In">
-            </form>
-          </div>
-        </li>
-
-        <!-- Sign up -->
-        <li class="nav-item dropdown my-2 my-lg-0">
-          <a class="nav-link btn btn-outline-info my-2 my-sm-0" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sign up
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <form id="sign-up">
-              <fieldset>
-                <legend>Sign Up</legend>
-                <input type="email" name="credentials[email]" placeholder="user@email.com">
-                <input type="password" name="credentials[password]" placeholder="Password">
-                <input type="password" name="credentials[password_confirmation]" placeholder="Password confirmation ">
-                <input type="submit" value="Sign Up">
-              </fieldset>
-            </form>
-          </div>
-        </li>
-
-        <!-- Change Password -->
-        <li class="nav-item dropdown my-2 my-lg-0">
-          <a class="nav-link btn btn-outline-info my-2 my-sm-0 hide" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Change Password
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <form id="change-Pw">
-              <legend>Change Password</legend>
-              <input type="password" name="passwords[old]" placeholder="Actual Password">
-              <input type="password" name="passwords[new]" placeholder="New Password">
-              <input type="submit" value="Change Password">
-            </form>
-          </div>
-        </li>
-
-        <!-- New Inventory Button
-        <li class="nav-item">
-          <form id="new-Inv" class="hide">
-            <fieldset>
-              <input type="submit" value="New Inv" class="btn btn-outline-success my-2 my-sm-0">
-            </fieldset>
-          </form>
-        </li> -->
-
+              <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener" aria-label="Twitter"><svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 416.32" focusable="false"><title>Twitter</title></svg>
+        </a>
+            </li>
         <!-- temporary reload Button -->
         <li class="nav-item my-2 my-lg-0">
           <form id="index-btn" class="hide">
@@ -92,15 +34,79 @@
           </form>
         </li>
       </ul>
-
       <!-- Auth Messages -->
       <h3 id='Messages' class='messageBoard'></h3>
+    <ul class="nav navbar-nav navbar-right ml-auto siging">
+			<li class="nav-item">
+				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
+				<ul class="dropdown-menu form-wrapper">
+					<li>
+						<form id="sign-in" method="post">
+							<div class="form-group">
+								<input type="text" class="form-control" name="credentials[email]" placeholder="Username" required="required">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" name="credentials[password]" placeholder="Password" required="required">
+							</div>
+							<input type="submit" class="btn btn-primary btn-block" value="Login">
+							<div class="form-footer">
+								<a href="#">Never use Real Credentials</a>
+							</div>
+						</form>
+					</li>
+				</ul>
+			</li>
+			<li class="nav-item">
+				<a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Sign up</a>
+				<ul class="dropdown-menu form-wrapper">
+					<li>
+						<form method="post" id="sign-up">
+							<p class="hint-text">Fill in this form to create your account!</p>
+							<div class="form-group">
+								<input type="text" class="form-control" name="credentials[email]" placeholder="Username" required="required">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" name="credentials[password]" placeholder="Password" required="required">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password" required="required">
+							</div>
+							<div class="form-group">
+								<a href="#">Never use Real Credentials</a>
+							</div>
+							<input type="submit" class="btn btn-primary btn-block" value="Sign up">
+						</form>
+					</li>
+				</ul>
+			</li>
+		</ul>
 
-      <!-- Log out -->
-      <form id="sign-out" class="hide form-inline my-2 my-lg-0">
-        <input class="btn btn-outline-info my-2 my-sm-0" type="submit" value="Log Out">
-      </form>
-    </div>
+    <ul class="nav navbar-nav navbar-right ml-auto logout-pass hide">
+      <li class="nav-item">
+        <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Settings</a>
+        <ul class="dropdown-menu form-wrapper">
+          <li>
+          <form id="change-Pw" method="post">
+              <div class="form-group">
+                <input type="password" class="form-control" name="passwords[old]" placeholder="Actual Password" required="required">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="passwords[new]" placeholder="New Password" required="required">
+              </div>
+              <input type="submit" class="btn btn-primary btn-block" value="Change Password">
+            </form>
+          </li>
+          <li>
+            <a href="#">- - - - - - - - - - - - - - - - - - - - - - - - - </a>
+          </li>
+          <li>
+            <form id="sign-out" class="form-inline my-2 my-lg-0">
+              <input class="btn btn-primary btn-block" type="submit" value="Log Out">
+            </form>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </nav>
 
   <section class="content">

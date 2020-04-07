@@ -33,10 +33,13 @@ const onDeleteItem = function (event) {
     })
     .catch(ui.failure)
 }
+const addHandlers = () => {
+  $('.item-form').on('submit', onCreateItem)
+  $('.items').on('click', '.delete-item-btn', onDeleteItem)
+}
 
-// export all functions
+// export handlers
 module.exports = {
-  onCreateItem,
-  indexItems,
-  onDeleteItem
+  addHandlers,
+  indexItems
 }
