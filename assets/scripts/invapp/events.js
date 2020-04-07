@@ -70,7 +70,7 @@ const addHandlers = () => {
   $('.deck').on('click', '.show-inv-btn', onShowInv)
   $('.deck').on('click', '.edit-inv-btn', onEditInv)
   $('.deck').on('submit', '.update-inv-btn', onUpdateInv)
-  $('#index-btn').on('submit', onIndexbtn)
+  $('#index-btn').on('click', onIndexbtn)
 }
 
 // export all functions

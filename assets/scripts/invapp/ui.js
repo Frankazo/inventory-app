@@ -17,6 +17,9 @@ const failure = function () {
 }
 
 const onIndexSucces = (data) => {
+  for (let i = 0; i < data.inventories.length; i++) {
+    data.inventories[i].date = data.inventories[i].date.slice(0, 10)
+  }
   const showInventoriesHtml = showInventoryTemplate({ inventories: data.inventories })
   $('.deck').html(showInventoriesHtml)
   $('.cards').removeClass('hide')
@@ -29,6 +32,7 @@ const onEditstate = (id) => {
 }
 
 const onUpdateSucces = (data) => {
+  data.inventory.date = data.inventory.date.slice(0, 10)
   const showUpdateHtml = showUpdatedTemplate({ inventory: data.inventory })
   $(`[data-id= ${data.inventory.id}]`).html(showUpdateHtml)
 }

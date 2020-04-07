@@ -11,6 +11,8 @@
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+  <script src="https://kit.fontawesome.com/0129282175.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,24 +20,22 @@
   <nav class="navbar navbar-expand navbar-light bg-light">
     <h2><a class="navbar-brand" href="#">InvApp</a></h2>
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="https://www.linkedin.com/in/franklr/" target="_blank">Frank Luis-Ravelo<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-              <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener" aria-label="Twitter"><svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 416.32" focusable="false"><title>Twitter</title></svg>
-        </a>
-            </li>
-        <!-- temporary reload Button -->
-        <li class="nav-item my-2 my-lg-0">
-          <form id="index-btn" class="hide">
-            <fieldset>
-              <input type="submit" value="Back" class="btn btn-outline-info my-2 my-sm-0">
-            </fieldset>
-          </form>
-        </li>
+        <li class="social">
+          <a class="btn btn-social-icon btn-secondary" href="https://www.linkedin.com/in/franklr/" target="_blank">
+            <span class="fa fa-code"></span>
+          </a>
+          <a class="btn btn-social-icon btn-secondary" href="https://www.linkedin.com/in/franklr/" target="_blank">
+            <span class="fa fa-github"></span>
+          </a>
+          <a class="btn btn-social-icon btn-secondary" href="https://www.linkedin.com/in/franklr/" target="_blank">
+            <span class="fa fa-linkedin"></span>
+          </a>
+      </li>
       </ul>
+
       <!-- Auth Messages -->
       <h3 id='Messages' class='messageBoard'></h3>
+
     <ul class="nav navbar-nav navbar-right ml-auto siging">
 			<li class="nav-item">
 				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
@@ -115,20 +115,25 @@
       </div>
     </section>
     <section class="inv-area hide">
-      <form class="item-form">
-            <input type="text" name="items[name]" placeholder="Item">
+      <section class="row">
+        <form class="item-form form-inline">
+              <input type="text" name="items[name]" placeholder="Item" class="form-control" required="required">
 
-            <input type="text" name="items[quantity]" placeholder="Quantity">
+              <input type="text" name="items[quantity]" placeholder="Quantity" class="form-control" required="required">
 
-            <input class="btn btn-outline-info my-2 my-sm-0" type="submit" value="Add">
+              <input class="btn btn-primary" type="submit" value="Add">
         </form>
+        <form id="index-btn" class="form-inline">
+              <input class="btn btn-primary" type="submit" value="Back">
+        </form>
+      </section>
       <table class="table item-table">
           <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Item</th>
               <th scope="col">Quantity</th>
-              <th scope="col">   </th>
+              <th scope="col">Accion</th>
             </tr>
           </thead>
           <tbody class="items">
@@ -140,9 +145,23 @@
 
   <!-- footer  -->
   <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
-    <div class="text-center">
-      <a class="nav-link" href="https://www.linkedin.com/in/franklr/" target="_blank">© Copyright 2020<span class="sr-only">(current)</span></a>
-    </div>
+      <div class="text-center">
+        <a>Develop using:</a>
+        <a class="btn btn-social-icon btn-info" href="#" title="JavaScript">
+          <span class="fab fa-js-square"></span>
+        </a>
+      <a class="btn btn-social-icon btn-info" href="#">
+        <span class="fas fa-gem"></span>
+      </a>
+      <a class="btn btn-social-icon btn-info" href="#">
+        <span class="fab fa-html5"></span>
+      </a>
+      <a class="btn btn-social-icon btn-info" href="#">
+        <span class="fab fa-css3-alt"></span>
+      </a>
+      <a class="btn btn-social-icon btn-info" href="#">JQuery
+      </a>
+      </div>
   </footer>
 </body>
 
