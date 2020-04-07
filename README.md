@@ -1,29 +1,32 @@
-Inventory App
--------------
+INVENTORY APP InvApp
+--------------------
+
 CONTENTS OF THIS FILE
 ---------------------
 
- * Introduction
- * Wireframes
- * User Stories
- * Planning and Development
- * Future features
- * Technologies
- * Creator
+   * Introduction
+   * Entity Relationship Diagram
+   * Wireframes
+   * User Stories
+   * Planning and Development
+   * Future features
+   * Technologies
+   * Creator
 
- INTRODUCTION
- ------------
+INTRODUCTION
+------------
 
   This is the Second project for Software engineering Immersive SEI09.
 
+  Inventory App that allows you to create and edit Inventories, using resources in a database.
 
-  ERD
-  ---
+ENTITY RELATIONSHIP DIAGRAM
+---------------------------
 
 ![EDR](https://i.imgur.com/yJAucB9.png)
 
-  WIREFRAMES
-  ----------
+WIREFRAMES
+----------
   Initial Stage
   - ![alt text](https://i.imgur.com/pIvQyGz.jpg)
 
@@ -34,8 +37,8 @@ CONTENTS OF THIS FILE
   - ![alt text](https://i.imgur.com/xgRVduj.jpg)
 
 
-  USER STORIES
-  ------------
+USER STORIES
+------------
 
     - As a user I want to sign in/up, change pass and log out.
     - As a user I want to Create a new Inventory.
@@ -44,39 +47,41 @@ CONTENTS OF THIS FILE
     - As a user I want to Update an Inventory or item I own
     - As a user I want to Delete an Inventory or item I own
 
-  PLANING AND DEVELOPMENT
-  -----------------------
-### Set Up
 
-  - First the Set up for the API and the client
+PLANING AND DEVELOPMENT
+-----------------------
+  ### Set Up
 
-  [Api](https://project2-sei09.herokuapp.com/)
-  Deployed using Heroku
-  [Client](https://frankazo.github.io/inventory-app/)
-  Deployed on Github Pages
+    Setting up for the API and the client.
+    [Api](https://project2-sei09.herokuapp.com/)
+    Deployed using Heroku
+    [Client](https://frankazo.github.io/inventory-app/)
+    Deployed on Github Pages
 
-### API
-  While Plannig for the Inventory App I decided to use Two Main resources
-  Therefore I Scaffold Two resources Inventory and Item
-  Tested all resources end points with curl scripts
-  Updated resource controller to inherit from Protected
-  Tested resources end points with curl scripts
-  Added the relationship to User
-  Added User ownership to resource controller
+  ### API
+    While Plannig for the Inventory App I decided to use Two Main resources
+    Therefore I Scaffold the resources Inventories and Items
+    Tested all resources end points with curl scripts
+    Updated resource controller to inherit from Protected
+    Tested resources end points with curl scripts
+    Added the relationship to User
+    Added User ownership to resource controller
 
-### Client
-  Develop functionality to Sign Up, Sign In, Change Password, Sign Out.
-  Added success or failure messages.
-  Added Crud request to Create, Show, Delete and Update resources.
+  ### Client
+    Develop functionality to Sign Up, Sign In, Change Password, Sign Out.
+    Added success or failure messages.
+    Added Crud request to Create, Show, Delete and Update resources.
 
-### Final Touches
-  README
-  Troubleshoot/Debug
-  Style
+  ### Final Touches
+    README
+    Troubleshoot/Debug
+    Style
 
-  FUTURE FEATURES
-  ---------------
-
+FUTURE FEATURES
+---------------
+  - Sharing functionalities.
+  - Multiple user collaboration.
+  - Statistics.
 
   TECHNOLOGIES
   ------------
