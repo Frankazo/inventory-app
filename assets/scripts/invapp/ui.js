@@ -1,10 +1,12 @@
 'use strict'
+// require all the necesary files
 const store = require('../store')
 const eventsItem = require('../items/events.js')
 const showInventoryTemplate = require('../templates/inventory-listing.handlebars')
 const showEditTemplate = require('../templates/edit-state.handlebars')
 const showUpdatedTemplate = require('../templates/updated-listing.handlebars')
 
+// On show function
 const onShowSucces = function (apiAnswer) {
   $('.inv-area, #index-btn').removeClass('hide')
   $('.cards').addClass('hide')
@@ -12,8 +14,10 @@ const onShowSucces = function (apiAnswer) {
   eventsItem.indexItems()
 }
 
+// Error message
 const failure = function () {
   $('#Messages').text('Error').removeClass('success').addClass('failure')
+  setTimeout(function () { $('#Messages').text('') }, 750)
 }
 
 const onIndexSucces = (data) => {
@@ -26,6 +30,7 @@ const onIndexSucces = (data) => {
   $('#index-btn, .inv-area').addClass('hide')
   $('.items').html('')
 }
+
 const onEditstate = (id) => {
   const showEditHtml = showEditTemplate({ id: id })
   $(`[data-id= ${id}]`).html(showEditHtml)

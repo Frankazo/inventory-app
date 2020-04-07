@@ -9,11 +9,13 @@ const onIndexSucces = function (apiAnswer) {
   // create the items template and added to the html
   const showItemsHtml = showItemsTemplate({ items: newArray })
   $('.items').html(showItemsHtml)
+  document.getElementById('item-form').reset()
 }
 
 const failure = function () {
   // error message to handle all errors
   $('#Messages').text('Error').removeClass('success').addClass('failure')
+  setTimeout(function () { $('#Messages').text('') }, 750)
 }
 
 // export all functions
