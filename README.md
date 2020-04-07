@@ -27,14 +27,17 @@ ENTITY RELATIONSHIP DIAGRAM
 
 WIREFRAMES
 ----------
-  Initial Stage
-  - ![alt text](https://i.imgur.com/pIvQyGz.jpg)
+Initial Stage
 
-  - Sign In or Sign Up Stage
-  - ![alt text](https://i.imgur.com/x4UaPay.jpg)
+<img src="https://i.imgur.com/pIvQyGz.jpg" width="250">
 
-  - Placeholder
-  - ![alt text](https://i.imgur.com/xgRVduj.jpg)
+Sign In or Sign Up Stage
+
+<img src="https://i.imgur.com/x4UaPay.jpg" width="250">
+
+Placeholder
+
+<img src="https://i.imgur.com/xgRVduj.jpg" width="250">
 
 
 USER STORIES
