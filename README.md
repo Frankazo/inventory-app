@@ -1,5 +1,7 @@
 INVENTORY APP InvApp
 --------------------
+### Front End [Client](https://github.com/Frankazo/inventory-app)
+
 ### Back End [API](https://github.com/Frankazo/project2-api)
 
 CONTENTS OF THIS FILE
