@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>InvApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="The Rock" />
+  <meta property="og:url" content="https://frankazo.github.io/inventory-app/" />
+  <meta property="og:image" content="https://i.imgur.com/USBMkcY.png" />
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+  <script src="https://kit.fontawesome.com/0129282175.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand navbar-light bg-light">
+    <h2><a class="navbar-brand" href="#">InvApp</a></h2>
+      <ul class="navbar-nav mr-auto">
+        <li class="social">
+          <a class="btn btn-social-icon btn-secondary" href="https://github.com/Frankazo/inventory-app" target="_blank">
+            <span class="fa fa-code"></span>
+          </a>
+          <a class="btn btn-social-icon btn-secondary" href="https://github.com/Frankazo/" target="_blank">
+            <span class="fa fa-github"></span>
+          </a>
+          <a class="btn btn-social-icon btn-secondary" href="https://www.linkedin.com/in/franklr/" target="_blank">
+            <span class="fa fa-linkedin"></span>
+          </a>
+      </li>
+      </ul>
+
+      <!-- Auth Messages -->
+      <h4 id='Messages' class='messageBoard'></h4>
+
+    <ul class="nav navbar-nav navbar-right ml-auto siging">
+			<li class="nav-item">
+				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
+				<ul class="dropdown-menu form-wrapper">
+					<li>
+						<form id="sign-in" method="post">
+							<div class="form-group">
+								<input type="text" class="form-control" name="credentials[email]" placeholder="Username" required="required">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" name="credentials[password]" placeholder="Password" required="required">
+							</div>
+							<input type="submit" class="btn btn-primary btn-block" value="Login">
+							<div class="form-footer">
+								<p>Never use Real Credentials</p>
+							</div>
+						</form>
+					</li>
+				</ul>
+			</li>
+			<li class="nav-item">
+				<a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Sign up</a>
+				<ul class="dropdown-menu form-wrapper">
+					<li>
+						<form method="post" id="sign-up">
+							<p class="hint-text">Fill in this form to create your account!</p>
+							<div class="form-group">
+								<input type="text" class="form-control" name="credentials[email]" placeholder="Username" required="required">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" name="credentials[password]" placeholder="Password" required="required">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password" required="required">
+							</div>
+							<div class="form-group">
+								<p>Never use Real Credentials</p>
+							</div>
+							<input type="submit" class="btn btn-primary btn-block" value="Sign up">
+						</form>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+    <ul class="nav navbar-nav navbar-right ml-auto logout-pass hide">
+      <li class="nav-item">
+        <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Settings</a>
+        <ul class="dropdown-menu form-wrapper">
+          <li>
+          <form id="change-Pw" method="post">
+              <div class="form-group">
+                <input type="password" class="form-control" name="passwords[old]" placeholder="Actual Password" required="required">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="passwords[new]" placeholder="New Password" required="required">
+              </div>
+              <input type="submit" class="btn btn-primary btn-block" value="Change Password">
+            </form>
+          </li>
+          <li>
+            <p>- - - - - - - - - - - - - - - - - - - - - - - - - </p>
+          </li>
+          <li>
+            <form id="sign-out" class="form-inline my-2 my-lg-0">
+              <input class="btn btn-primary btn-block" type="submit" value="Log Out">
+            </form>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="content">
+    <section>
+      <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+          <div class="text-white text-center py-5 px-4">
+          <div>
+          <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Create impressive Inventories with InvApp</strong></h2>
+          <p class="mx-5 mb-5">InvApp is a visual workspace that allows you to create, edit and share Inventories. Sing up today, for Free.
+          </p>
+          <a class="btn btn-outline-white btn-md" href="https://github.com/Frankazo/inventory-app" target="_blank"><i class="fas fa-clone left"></i> View project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cards hide">
+      <div class="row row-cols-1 row-cols-md-4 deck">
+      </div>
+    </section>
+    <section class="inv-area hide">
+      <section class="row">
+        <form id="item-form" class="item-form form-inline">
+              <input type="text" name="items[name]" placeholder="Item" class="form-control" required="required">
+
+              <input type="text" name="items[quantity]" placeholder="Quantity" class="form-control" required="required">
+
+              <input class="btn btn-primary" type="submit" value="Add">
+        </form>
+        <form id="index-btn" class="form-inline">
+              <input class="btn btn-primary" type="submit" value="Back">
+        </form>
+      </section>
+      <table class="table item-table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Item</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Accion</th>
+            </tr>
+          </thead>
+          <tbody class="items">
+          </tbody>
+      </table>
+    </section>
+  </section>
+
+
+  <!-- footer  -->
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+      <div class="text-center">
+        <a>Develop using:</a>
+        <span class="btn btn-social-icon btn-info fab fa-js-square"></span>
+        <span class="btn btn-social-icon btn-info fas fa-gem"></span>
+        <span class="btn btn-social-icon btn-info fab fa-html5"></span>
+        <span class="btn btn-social-icon btn-info fab fa-css3-alt"></span>
+        <span class="btn btn-social-icon btn-info">JQuery</span>
+      </div>
+  </footer>
+</body>
+
+</html>
