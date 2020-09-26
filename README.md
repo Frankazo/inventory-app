@@ -100,7 +100,7 @@ FUTURE FEATURES
   - jQuery for DOM manipulation and event handling.
   - Handlebars for view rendering.
   - HTML and CSS.
-  - Bootstrap for addional Styling.
+  - Bootstrap for additional Styling.
 
   CREATOR
   -------
